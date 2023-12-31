@@ -18,8 +18,6 @@ mongoose.connect(
 
 app.use(express.json());
 app.use(cors());
-app.get('/', (req, res) => {
-    res.send('WELCOME TO BACKEND');
-});
-app.use('/form',routers);
+
+app.use(routers);
 app.listen(PORT, () => console.log(`+ SERVER IS RUNNING ON ${PORT}`))
